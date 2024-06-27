@@ -28,8 +28,42 @@ void report();
 
 int main ()
 {
-  
+  int option;
+
+  do{
+      //Display menu
+      printf("\n______________________________\n");
+      printf("STUDENT INFORMATION SYSTEM\n");
+      printf("------------------------------\n");
+      printf("MAIN MENU\n");
+      printf("______________________________\n");
+      printf("1 | Student Details\n");
+      printf("2 | Course Details\n");
+      printf("3 | Student Report\n");
+      printf("0 | Exit\n");
+      printf("______________________________\n");
+
+    //Prompt user for an option
+    printf("Enter Option: ");
+    scanf("%d",&option);
+
+    switch(option){
+          case 1:
+                addStuDet();
+                break; 
+            case 2:
+                coursedet();
+                break;
+            case 3:
+                report();
+                break;
+        };
+  }while (option!=0);
+
+
+return 0;
 }
+
 
 //Function to add student details
 void addStuDet(){
